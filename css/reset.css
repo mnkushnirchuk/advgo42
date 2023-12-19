@@ -50,6 +50,13 @@ textarea,
 select {
   font: inherit;
 }
+input{
+  outline: none;
+}
+button{
+  background: none;
+  cursor: pointer;
+}
 a{
   text-decoration: none;
   color: black;
