@@ -95,6 +95,10 @@ body{
     background: #29C1C2;
     color: #FFF;
 }
+.header_logo_2{
+    margin-right: 0px;
+    margin-bottom: 80px;
+}
 .main_block {
 }
 .elements {
@@ -164,6 +168,7 @@ body{
 .block_title {
     font-size: 48px;
     padding-bottom: 12px;
+    text-align: center;
 }
 .block_title span{
     color: #15ADAE;
@@ -240,6 +245,15 @@ body{
 .card_item_wbutton:hover .card_button{
     background: #FF512F;
 }
+.card_item_wbutton:hover .hover_icon{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+.card_item_wbutton:hover .icon{
+    display: none;
+}
 .ellipse_big {
     width: 100px;
     height: 100px;
@@ -259,6 +273,7 @@ body{
     background: #15ADAE;
     border-radius: 50%;
     transition: all ease 0.5s;
+    position: relative;
 }
 .card_title {
     font-size: 24px;
@@ -266,6 +281,16 @@ body{
     font-weight: 1000;
     padding: 60px 20px 13px 20px;
 }
+.hover_icon{
+    display: none;
+    width: 50px;
+    height: 50px;
+    transition: all ease 0.5s;
+}
+.icon{
+    transition: all ease 0.5s;
+}
+
 
 
 
@@ -278,11 +303,13 @@ body{
 .work_row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     column-gap: 130px;
     margin: 20px 20px 0 20px;
 }
 .elements_2{
     position: absolute;
+    z-index: -7;
 }
 .work_column_1 {
     display: flex;
@@ -495,14 +522,11 @@ body{
     margin: 0 auto;
     margin-top: 50px;
 }
-
+.year{
+    margin-right: 50px;
+}
 .policy {
     display: flex;
     column-gap: 67px;
 }
-
-
-/*пагинация*/
-
-
   
