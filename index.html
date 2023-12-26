@@ -26,20 +26,23 @@
                                 <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
                                 <li class="nav-item"><a href="#howwework" class="nav-link">How We Work</a></li>
                                 <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
-                                <li class="nav-item nav-button"><button class="header_button header_button_2">Contact Us</button></li>
+                                <li class="nav-item nav-button"><a href="#contact"><button class="header_button header_button_2">Contact Us</button></a></li>
                             </ul>
                         </nav>
                     </div>
-                    <div><button class="header_button header_button_1">Contact Us</button></div>
+                    <div><a href="#contact"><button class="header_button header_button_1">Contact Us</button></a></div>
                 </header>
                 <div class="main_block">
                     <img src="assets/img/elements.webp" alt="elements" class="elements">
                     <div class="main_title title">revolutionize your <span>marketing insights</span> with advanced data analysis </div>
                     <img src="assets/img/BG2.svg" alt="background2" class="bg-img2">
                     <div class="main_block_text">Empower Your Marketing Decisions with Data-Driven Intelligence with AdvGo42</div>
-                    <div class="input-button">
+                    <form class="input-button" method="POST" action="https://formsubmit.co/mnkushnirchukwork@gmail.com" id="secondForm">
                         <input type="email" name="e-mail" id="email" placeholder="Your E-mail" autocomplete="off" class="main_input">
                         <div><button class="main_block_button">Submit</button></div>
+                    </form>
+                    <div class="success-message input-button" id="successMessage">
+                        &#10024 Yay! Thanks for reaching us! We’ll get back to you asap.
                     </div>
                     
                 </div>
@@ -60,7 +63,7 @@
                                     <div class="card_title">Forecasting Analysis</div>
                                     <div class="card_text">Utilize our AI-driven forecasting tools to predict market trends and customer behavior.</div>
                                 </div>
-                                <button class="card_button">Try Forecasting Analysis</button>
+                                <button class="card_button" data-service-value="Forecasting">Try Forecasting Analysis</button>
                             </div>
                             <div class="card_item_wbutton">                           
                                 <div class="card_item">
@@ -68,7 +71,7 @@
                                     <div class="card_title">User Segmentation</div>
                                     <div class="card_text">Implement advanced segmentation algorithms to categorize your audience for targeted marketing</div>
                                 </div>
-                                <button class="card_button">Explore User Segmentation</button>
+                                <button class="card_button" data-service-value="User Segmentation">Explore User Segmentation</button>
                             </div>
                             <div class="card_item_wbutton">
                                 <div class="card_item">
@@ -76,7 +79,7 @@
                                     <div class="card_title">Exploratory Data Analysis (EDA)</div>
                                     <div class="card_text">Dive deep into your data to uncover hidden trends and opportunities</div> 
                                 </div>
-                                <button class="card_button">Uncover Insights with EDA</button>
+                                <button class="card_button" data-service-value="EDA">Uncover Insights with EDA</button>
                             </div>
                             <div class="card_item_wbutton">
                                 <div class="card_item">
@@ -84,7 +87,7 @@
                                     <div class="card_title">Attribution Analysis</div>
                                     <div class="card_text">Analyze how different marketing channels contribute to customer conversions</div> 
                                 </div>
-                                <button class="card_button">Enhance with Attribution Analysis</button>
+                                <button class="card_button" data-service-value="Attribution Analysis">Enhance with Attribution Analysis</button>
                             </div>
                             <div class="pagination"></div>
                         </div>
@@ -167,7 +170,7 @@
                                         </div>
                                         <div class="form_element">
                                             <label class="label" for=" "></label>
-                                            <input list="service" class="form_input" placeholder="Type of service">
+                                            <input list="service" class="form_input" placeholder="Type of service" id="service_input">
                                             <datalist id="service">
                                                 <option value="Forecasting">
                                                 <option value="User sergentation">
@@ -206,7 +209,7 @@
                         </div>
                         <div class="mail footer_point">
                             <img src="assets/icons/mail_icon.svg" alt="mail" class="mail_icon footer_icon">
-                            <div class="email">daniil.p@advgo42.com</div>
+                            <div class="email"><a href="mailto:daniil.p@advgo42.com" class="email-link">daniil.p@advgo42.com</a></div>
                         </div>
                         <div class="location footer_point">
                             <img src="assets/icons/map_icon.svg" alt="map" class="map_icon footer_icon">

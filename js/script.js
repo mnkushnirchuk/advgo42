@@ -28,7 +28,71 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.getElementById('myForm').addEventListener('submit', submitForm);
+    function submitForm2(event) {
+        event.preventDefault();
+
+        var form = document.querySelector('.input-button');
+        var successMessage = document.getElementById('successMessage');
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("POST", "https://formsubmit.co/ajax/mnkushnirchukwork@gmail.com", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    console.log(response);
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                } else {
+                    console.error('Error:', xhr.statusText);
+                }
+            }
+        };
+
+        xhr.send(formData);
+    }
+
+    document.getElementById('secondForm').addEventListener('submit', submitForm2);
 });
+
+
+
+
+
+/*-------INPUT BUTTON CLICK-------*/
+document.addEventListener('DOMContentLoaded', function () {
+    const cardButtons = document.querySelectorAll('.card_button');
+    const contactBlock = document.getElementById('contact');
+    const serviceInput = document.getElementById('service_input');
+  
+    function handleButtonClick(value) {
+      contactBlock.style.display = 'block';
+  
+      serviceInput.value = value;
+      contactBlock.scrollIntoView({ behavior: 'smooth' });
+  
+      serviceInput.focus();
+    }
+      cardButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        const value = button.getAttribute('data-service-value');
+  
+        handleButtonClick(value);
+      });
+    });
+  
+    serviceInput.addEventListener('focus', function () {
+      serviceInput.setAttribute('list', 'service');
+    });
+  
+    serviceInput.addEventListener('mouseover', function () {
+      serviceInput.setAttribute('list', 'service');
+    });
+  });
+  
+  
+
 
 
 /*------MENU-------*/
@@ -52,11 +116,12 @@ function menuToggle() {
     }
 }
 function menuClose(e) {
-    if (e.target.tagName === 'A') {
+    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
         menuToggle();
         body.classList.remove('_lock');
     }
 }
+
 
 function outsideClickHandler(e) {
     if (menuBody && iconMenu && !menuBody.contains(e.target) && !iconMenu.contains(e.target)) {
@@ -110,7 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             paginationContainer.style.display = 'none';
             
-            // При возвращении величины, покажем все карточки
             cardItems.forEach(function (item) {
                 item.style.display = 'flex';
             });
