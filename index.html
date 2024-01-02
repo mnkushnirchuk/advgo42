@@ -154,29 +154,29 @@
                                         <div class="form_title">Contact us</div>
                                         <div class="form_element">
                                             <label class="label" for=" "></label>
-                                            <input type="email" class="form_input" placeholder="Email">
+                                            <input type="email" name="Email" id="email" class="form_input" placeholder="Email" autocomplete="off">
                                         </div>
                                         <div class="form_element">
                                             <label class="label" for=" "></label>
-                                            <input type="text" class="form_input" placeholder="Name">
+                                            <input type="text" name="Name" id="name" class="form_input" placeholder="Name" autocomplete="off">
                                         </div>
                                         <div class="form_element">
                                             <label class="label" for=" "></label>
-                                            <input type="text" class="form_input" placeholder="Company">
+                                            <input type="text" name="Company" id="company" class="form_input" placeholder="Company" autocomplete="off">
                                         </div>
                                         <div class="form_element">
                                             <label class="label" for=" "></label>
-                                            <input type="text" class="form_input" placeholder="Other">
+                                            <input type="text" name="Other" id="other" class="form_input" placeholder="Other" autocomplete="off">
                                         </div>
                                         <div class="form_element">
                                             <label class="label" for=" "></label>
-                                            <input list="service" class="form_input" placeholder="Type of service" id="service_input">
-                                            <datalist id="service">
-                                                <option value="Forecasting">
-                                                <option value="User sergentation">
-                                                <option value="EDA">
-                                                <option value="Attribution analysis">
-                                            </datalist>
+                                            <select name="Service" class="form_input form_select" id="service_input">
+                                                <option value="" disabled selected>Select a service</option>
+                                                <option value="Forecasting">Forecasting</option>
+                                                <option value="User Segmentation">User segmentation</option>
+                                                <option value="EDA">EDA</option>
+                                                <option value="Attribution Analysis">Attribution analysis</option>
+                                            </select>
                                         </div>
                                         <input type="hidden" name="_captcha" value="false">
                                         <button class="form_button" type="submit">Submit</button>
@@ -219,9 +219,9 @@
                     <div class="footer_2_row">
                         <div class="year">© 2023 AdvGo42 Advertising agency</div>
                         <div class="policy">
-                            <p>Cookie Policy</p>
-                            <p>Privacy Policy</p>
-                            <p>EULA</p>
+                            <a href="#">Cookie Policy</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">EULA</a>
                         </div>
                     </div>
                 </footer>

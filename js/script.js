@@ -65,31 +65,31 @@ document.addEventListener('DOMContentLoaded', function () {
     const cardButtons = document.querySelectorAll('.card_button');
     const contactBlock = document.getElementById('contact');
     const serviceInput = document.getElementById('service_input');
-  
+
     function handleButtonClick(value) {
-      contactBlock.style.display = 'block';
-  
-      serviceInput.value = value;
-      contactBlock.scrollIntoView({ behavior: 'smooth' });
-  
-      serviceInput.focus();
+        contactBlock.style.display = 'block';
+        serviceInput.value = value;
+        serviceInput.dispatchEvent(new Event('change'));
+        serviceInput.focus();
     }
-      cardButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        const value = button.getAttribute('data-service-value');
-  
-        handleButtonClick(value);
-      });
+
+    cardButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const value = button.getAttribute('data-service-value');
+            handleButtonClick(value);
+            contactBlock.scrollIntoView({ behavior: 'smooth' });
+        });
     });
-  
-    serviceInput.addEventListener('focus', function () {
-      serviceInput.setAttribute('list', 'service');
+
+    serviceInput.addEventListener('change', function () {
+        const selectedOption = serviceInput.options[serviceInput.selectedIndex].value;
+        if (selectedOption) {
+            contactBlock.style.display = 'block';
+        }
     });
-  
-    serviceInput.addEventListener('mouseover', function () {
-      serviceInput.setAttribute('list', 'service');
-    });
-  });
+});
+
+
   
   
 

@@ -6,6 +6,7 @@ body{
     font-weight: 400;
     font-size: 16px;
     color: #1A1A1A;
+    
 }
 
 
@@ -486,6 +487,10 @@ body{
     margin-top: 10px;
     background: none;
     cursor: pointer;
+    outline: none;
+}
+.form_select{
+    margin-top: 15px;
 }
 .form_button {
     margin-top: 45px;
@@ -585,6 +590,9 @@ body{
     width: 100%;
     margin: 0 auto;
     margin-top: 50px;
+}
+.footer_2_row a{
+    color: #778083;
 }
 .email-link{
     color: #fff;

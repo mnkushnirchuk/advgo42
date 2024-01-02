@@ -268,6 +268,10 @@
     .input-button{
         margin-left: 15px;
         padding-right: 15px;
+        margin-bottom: 140px;
+    }
+    .bg-img{
+        top: 80px;
     }
 }
 @media screen and (min-width:1024px) {
@@ -275,6 +279,11 @@
     .header_logo_2{
         display: none;
     }   
+}
+@media screen and (min-width:1580px) {
+    .bg-img{
+        padding-left: 100px;
+    }
 }
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
     .bg-img{
@@ -368,6 +377,11 @@
         margin-right: 0;
         column-gap: 0;
     }
-
+}
+@media screen and (min-width:540px) and (max-width:768px) {
+    .main_title{
+        max-width: 550px;
+        width: 100%;
+    }
 }
 
